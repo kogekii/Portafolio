@@ -1,49 +1,37 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
-import Navbar from '../components/Navbar.astro';
-
+import ProyectCard from '../components/Proyect-card.astro';
+import proyectos from '../proyectos/proyectos.json';
 ---
 
 <Layout title="Andres Ijurra">
-	<main>
-		<Navbar />
+	<section>
 		<h1>Andrés Ijurra <span class="text-gradient">Developer</span></h1>
 		<p class="instructions">
 			Desarrollador junior con experiencia en el desarrollo de aplicaciones web y móviles. 
 			Me gusta aprender nuevas tecnologías y trabajar en equipo.
 		</p>
-		<p>Proyectos <span class="text-gradient">recientes</span></p>
-		<ul role="list" class="link-card-grid">
-			<Card
-				href="https://github.com/kogekii/RubricFlow"
-				title="RubricFlow"
-				body="Aplicacion web para construir Rubricas de manera mas sencilla y dinamica."
-				state='in-progress'
-				tecnologias={['ruby', 'next', 'rails', 'docker', 'tailwind']}
-			/>
-		</ul>
-		<p>Publicaciones <span class="text-gradient">recientes</span></p>
-		<ul role="list" class="link-card-grid">
-			<!-- <Card
-				href="https://dev.to/kogekii/que-es-una-rubrica-1j3n"
-				title="Actualización de RubricFlow"
-				body="Se agrega la funcionalidad de poder cambiar el nombre de los criterios y descriptores de una rubrica."
-				state='published'
-			/> -->
-	</main>
+	</section>
+	
+	<section role="list" >
+		<h2 class="text-4xl mb-5 text-secondary">Proyectos recientes</h2>
+		<div class="grid grid-cols-1 gap-8 p-0">
+			{proyectos.map((proyecto) => (
+				<ProyectCard
+					href={proyecto.url}
+					title={proyecto.nombre}
+					image={proyecto.imagen}
+					body={proyecto.descripcion}
+					state={proyecto.state}
+					tecnologias={proyecto.tecnologias}
+				/>
+			))}
+		</div>
+	</section>
 </Layout>
 
 <style>
-	main {
-		margin: auto;
-		padding: 1rem;
-		width: 800px;
-		max-width: calc(100% - 2rem);
-		color: white;
-		font-size: 20px;
-		line-height: 1.6;
-	}
 	.astro-a {
 		position: absolute;
 		top: -32px;
@@ -84,11 +72,5 @@ import Navbar from '../components/Navbar.astro';
 	}
 	.instructions strong {
 		color: rgb(var(--accent-light));
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 2rem;
-		padding: 0;
 	}
 </style>

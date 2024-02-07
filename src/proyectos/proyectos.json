@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "nombre": "RubricFlow",
+        "imagen": "../../public/screenplay rubricflow.png",
+        "descripcion":" Aplicacion web para construir Rubricas de manera mas sencilla y dinamica.",
+        "url": "https://github.com/kogekii/RubricFlow",
+        "tecnologias": ["ruby", "next", "rails", "docker", "tailwind"],
+        "state": "En desarrollo"
+    },
+    {
+        "id": 2,
+        "nombre": "Tzadik",
+        "imagen": "../../public/screenplay rubricflow.png",
+        "descripcion":"Descripcion 2",
+        "url": "https://github.com/kogekii/Tzadik",
+        "tecnologias": ["astro", "tailwind"],
+        "state": "En desarrollo"
+    }
+]

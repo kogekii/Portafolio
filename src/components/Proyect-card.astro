@@ -1,0 +1,41 @@
+---
+interface Props {
+	title: string;
+	body: string;
+	image: string;
+	href: string;
+	state: string;
+	tecnologias: string[];
+}
+const { href, title, body, state, tecnologias, image } = Astro.props;
+
+function getTechBadge(tecnologia: string) {
+	const techBadgeMap: { [key: string]: string } = {
+		"react": "React-61DAFB?style=for-the-badge&logo=react&logoColor=white",
+		"next": "Next-black?style=for-the-badge&logo=next.js&logoColor=white",
+		"ruby": "Ruby-CC342D?style=for-the-badge&logo=ruby&logoColor=white",
+		"rails": "Rails-CC0000?style=for-the-badge&logo=ruby-on-rails&logoColor=white",
+		"postgres": "PostgreSQL-336791?style=for-the-badge&logo=postgresql&logoColor=white",
+		"node": "Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white",
+		"vue": "Vue.js-4FC08D?style=for-the-badge&logo=vue.js&logoColor=white",
+		"astro": "Astro-000000?style=for-the-badge&logo=astro&logoColor=white",
+		"docker": "Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white",
+		"tailwind": "Tailwind CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white",
+	};
+
+	return techBadgeMap[tecnologia] || "";
+}
+
+---
+
+    <article 
+    class="bg-gradient-to-br from-finn-800 to-finn-950 shadow-sm pt-2 pb-2 text-primary rounded-lg grid grid-cols-4">
+        <div class="">
+            <img src={image} class="w-28 h-28 mx-auto rounded-lg"></img>
+        </div>
+        <article class="col-start-2 col-end-5">
+            <h1 class="text-3xl">{title}</h1>
+            <p class="text-lg">{body}</p>
+        </article>
+        
+    </article>
