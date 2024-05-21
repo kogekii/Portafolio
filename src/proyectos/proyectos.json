@@ -1,20 +1,19 @@
 [
     {
-        "id": 1,
-        "nombre": "RubricFlow",
-        "imagen": "../../public/screenplay rubricflow.png",
-        "descripcion":" Aplicacion web para construir Rubricas de manera mas sencilla y dinamica.",
-        "url": "https://github.com/kogekii/RubricFlow",
-        "tecnologias": ["ruby", "next", "rails", "docker", "tailwind"],
-        "state": "En desarrollo"
-    },
-    {
         "id": 2,
         "nombre": "Tzadik",
-        "imagen": "../../public/screenplay rubricflow.png",
-        "descripcion":"Descripcion 2",
-        "url": "https://github.com/kogekii/Tzadik",
+        "imagen": "tzadik.png",
+        "descripcion":"Pagina web de la empresa Tzadik, dedicada a la venta de productos de electricidad y mecanica piping.",
+        "url": "https://tzadik.cl/",
         "tecnologias": ["astro", "tailwind"],
-        "state": "En desarrollo"
+        "state": "Finalizado"
+    },{
+        "id": 3,
+        "nombre": "Api Mercado Pago",
+        "imagen": "mercadopago.png",
+        "descripcion":"Api que conecta mercado pago con excel para automatizar la gestion de pagos.",
+        "url": "",
+        "tecnologias": ["node", "express", "mercadopago"],
+        "state": "Finalizado"
     }
 ]

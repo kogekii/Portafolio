@@ -4,22 +4,20 @@ export default {
 	theme: {
 		extend: {
 			colors: {
-				'primary': '#e4e4e4',
-				'secondary': '#6c2f67',
-				'finn': {
-					'50': '#fdf6fd',
-					'100': '#faecfb',
-					'200': '#f4d9f5',
-					'300': '#ecbaed',
-					'400': '#e191e1',
-					'500': '#cf66cf',
-					'600': '#b247af',
-					'700': '#93388f',
-					'800': '#783073',
-					'900': '#6c2f67',
-					'950': '#40123d',
-				},
+				'primary': '#F5F5F5',
+				'secondary': '#781D7A',
+				'tertiary': '#5D2669',
 				
+			},
+			fontSize: {
+				'titulo1': '3.5rem',
+				'titulo2': '3rem',
+				'titulo3': '2.5rem',
+				'titulo4': '2rem',
+				'logo': '1.5rem',
+			},
+			fontFamily: {
+				"holtwood": ['Holtwood One SC', 'sans-serif'],
 			}
 		},
 	},
