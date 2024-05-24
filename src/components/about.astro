@@ -1,0 +1,17 @@
+---
+import { getTechBadge } from "./functions/getTechBadge"
+const tech = ["node", 'astro', 'react', 'github', 'docker'];
+---
+<section class="flex-1">
+    <h2 class="text-titulo3 font-semibold text-secondary font-holtwood">Sobre mi</h2>
+    <p class="text-black text-2xl">
+        Hola, soy Andrés Ijurra, desarrollador web, me apasiona la tecnología y la programación, 
+        soy autodidacta y me gusta aprender cosas nuevas, me gusta trabajar en equipo y compartir conocimientos, me considero una persona 
+        proactiva y responsable, siempre dispuesto a aprender y aportar en los proyectos en los que 
+        participo.
+    </p>
+</section>
+<section>
+    <h2 class="text-titulo3 font-semibold text-secondary font-holtwood">Stack</h2>
+    {tech.map(tech => {return <img src={`https://img.shields.io/badge/${getTechBadge(tech)}`} alt={tech} class="inline-block m-1 h-12" />})}
+</section>

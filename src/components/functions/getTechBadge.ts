@@ -12,6 +12,11 @@ export function getTechBadge(tecnologia: string) {
 		"tailwind": "Tailwind CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white",
 		"express": "Express-000000?style=for-the-badge&logo=express&logoColor=white",
 		"mercadopago": "Mercado Pago-32C03C?style=for-the-badge&logo=mercadopago&logoColor=white",
+		"html": "HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white",
+		"css": "CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white",
+		"github": "GitHub-181717?style=for-the-badge&logo=github&logoColor=white",
+		"git": "Git-F05032?style=for-the-badge&logo=git&logoColor=white",
+		"javascript": "JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black",
 	};
 
 	return techBadgeMap[tecnologia] || "";

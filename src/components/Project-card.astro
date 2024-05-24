@@ -29,13 +29,13 @@ import { getTechBadge } from './functions/getTechBadge';
             <p class="text-lg text-black">{body}</p>
 
 			<div class="flex flex-wrap">
-				{tecnologias.map((tecnologia) => (
-					<img src={`https://img.shields.io/badge/${getTechBadge(tecnologia)}`} class="m-1"></img>
+				{tecnologias.map((tecnología) => (
+					<img src={`https://img.shields.io/badge/${getTechBadge(tecnología)}`} class="m-1"></img>
 				))}
         </article>
 		<div class="flex justify-evenly">
-			<a href=`/proyectos/${id}` class="bg-secondary rounded-md p-1">Detalles</a>
-			<a href=`${url}` target="_blank" class="bg-secondary rounded-md p-1">Visitar Pagina</a>
+			<a href=`/proyectos/${id}` class="text-base bg-secondary px-3 rounded-xl font-holtwood  hover:text-black">Detalles</a>
+			<a href=`${url}` target="_blank" class="text-base bg-secondary px-3  rounded-xl font-holtwood   hover:text-black">Visitar Página</a>
 		</div>
 		
         

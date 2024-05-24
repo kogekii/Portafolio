@@ -1,0 +1,24 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import proyectos from "../../data/proyectos.json";
+import ProjectCard from "../../components/Project-card.astro";
+---
+<Layout title="proyectos">
+    <section class="mt-5 w-full">
+		<h2 class="text-titulo3 font-semibold text-secondary font-holtwood">Proyectos</h2>
+		<div class="flex flex-grow-1 justify-center gap-14 p-0">
+			{proyectos.map((proyecto) => (
+				<ProjectCard
+					id={proyecto.id}
+					href={proyecto.url}
+					title={proyecto.nombre}
+					img={proyecto.imagen}
+					body={proyecto.descripcion.slice(0, 100) + "..."}
+					state={proyecto.state}
+					tecnologias={proyecto.tecnologias}
+					url={proyecto.url}
+				/>
+			))}
+		</div>
+	</section>
+</Layout>

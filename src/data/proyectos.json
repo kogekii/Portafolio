@@ -1,0 +1,19 @@
+[
+    {
+        "id": 2,
+        "nombre": "Tzadik",
+        "imagen": "tzadik.svg",
+        "descripcion":"Página pagina web de la empresa Tzadik, dedicada a la venta de productos de electricidad y mecánica piping.",
+        "url": "https://tzadik.cl/",
+        "tecnologias": ["astro", "tailwind"],
+        "state": "Finalizado"
+    },{
+        "id": 3,
+        "nombre": "SpreadsMercadopago",
+        "imagen": "mercadopago.webp",
+        "descripcion":"SpreadsMercado pago es una api la cual permite administrar los webhooks de mercadopago de una manera mas sencilla y eficiente. \n\nEsta api permite automáticamente traspasar los pagos de mercadopago a una planilla de google sheets. \n\naunque ya se encuentre terminada en su forma base, se sigue trabajando en ella para mejorar la interacción con el usuario y agregar nuevas funcionalidades.",
+        "url": "https://github.com/kogekii/SpreadsMercadopago",
+        "tecnologias": ["node", "express", "mercadopago"],
+        "state": "Finalizado"
+    }
+]

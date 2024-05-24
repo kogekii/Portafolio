@@ -1,6 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro'
-import projects from '../../proyectos/proyectos.json'
+import projects from '../../data/proyectos.json'
 import Image from 'astro/components/Image.astro'
 import { getTechBadge } from '../../components/functions/getTechBadge'
 export function getStaticPaths(){
@@ -23,16 +23,15 @@ const imageurl = `http://localhost:4321/${project.imagen}`;
 <Layout title={project.nombre}>
     <div class="flex">
         <article>
-            <h1 class="text-secondary text-titulo1 font-semibold">Project {project.nombre}</h1>
-            <p class="text-secondary text-titulo4">{project.descripcion}</p>
-            <h2 class="text-secondary text-titulo2">Tecnologias</h2>
-            <p class="text-secondary text-titulo4">Este proyecto ha sido desarrollado utilizando las siguientes tecnologías:</p>
+            <h1 class="text-secondary text-titulo1 font-semibold text-nowrap">{project.nombre}</h1>
+            <p class="text-black whitespace-pre-wrap">{project.descripcion}</p>
+            <h2 class="text-secondary text-titulo3 font-semibold">Tecnologias</h2>
             {project.tecnologias.map(tec => {
-                return <img src={`https://img.shields.io/badge/${getTechBadge(tec)}`} class="m-1 inline-block"></img>
+                return <img src={`https://img.shields.io/badge/${getTechBadge(tec)}`} class="m-1 inline-block w-48 h-16"></img>
             })}
         <div class="flex justify-evenly mt-2">
-            <a href={project.url} class="text-titulo4 bg-secondary p-1 rounded-md">Ver proyecto</a>
-            <a href="/" class="text-titulo4 bg-secondary p-1 rounded-md">Volver</a>
+            <a href={project.url} target="_blank" class=" bg-secondary px-5 rounded-xl font-holtwood py-1 items-center hover:text-black">Ver proyecto</a>
+            <a href="/" class=" bg-secondary px-5 py-1 rounded-xl font-holtwood  items-center hover:text-black">Volver</a>
         </div>
         </article>
         <Image src={imageurl} alt={project.nombre} class="w-1/2" width="500" height="500"/>

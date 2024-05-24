@@ -1,12 +1,11 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
-import ProyectCard from '../components/Proyect-card.astro';
-import proyectos from '../proyectos/proyectos.json';
+import About from '../components/about.astro';
+import ProjectCard from '../components/Project-card.astro';
+import proyectos from '../data/proyectos.json';
 import panda from '../assets/panda-eat-popcorn.png';
 import { Image } from 'astro:assets';
 ---
-
 <Layout title="Andres Ijurra">
 
 	<section class="flex justify-center">
@@ -27,35 +26,28 @@ import { Image } from 'astro:assets';
 						text-nowrap">
 				Andrés Ijurra
 			</h1>
-			<h2 class="text-center text-secondary font-holtwood text-titulo4">Desarrollador Web</h2>
+			<h2 class="text-center text-black font-holtwood text-titulo4">Desarrollador Web</h2>
 		</div>	
 	</section>
-	<section>
-		<h2 class="text-titulo3 font-semibold text-secondary font-holtwood">Sobre mi</h2>
-		<p class="text-black text-justify font-holtwood">
-			Hola, soy Andrés Ijurra, desarrollador web, me apasiona la tecnología y la programación, 
-			soy autodidacta y me gusta aprender cosas nuevas, me gusta trabajar en equipo y compartir conocimientos, me considero una persona 
-			proactiva y responsable, siempre dispuesto a aprender y aportar en los proyectos en los que 
-			participo.
-		</p>
-	</section>
+	<About />
+
 	<section class="mt-5 w-full">
-		<h2 class="text-titulo3 font-semibold text-secondary font-holtwood">Proyectos</h2>
+		<h2 class="text-titulo3 font-semibold text-secondary font-holtwood">Últimos Proyectos</h2>
 		<div class="flex flex-grow-1 justify-center gap-14 p-0">
 			{proyectos.map((proyecto) => (
-				<ProyectCard
+				<ProjectCard
 					id={proyecto.id}
 					href={proyecto.url}
 					title={proyecto.nombre}
 					img={proyecto.imagen}
-					body={proyecto.descripcion}
+					body={proyecto.descripcion.slice(0, 100) + '...'}
 					state={proyecto.state}
 					tecnologias={proyecto.tecnologias}
 					url={proyecto.url}
 				/>
 			))}
 		</div>
-		<a href="/" class="text-secondary text-logo text-end block font-holtwood hover:text-black">ver más</a>
+		<a href="/proyectos" class="text-secondary text-logo text-end block font-holtwood hover:text-black">ver más</a>
 	</section>
 </Layout>
 
