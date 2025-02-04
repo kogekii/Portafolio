@@ -36,7 +36,7 @@ if (!images[project.imagen]) throw new Error(`"${project.imagen}" does not exist
             <a href="/" class=" bg-secondary px-5 py-1 rounded-xl font-holtwood  items-center hover:text-black">Volver</a>
         </div>
         </article>
-        <Image src={images[project.imagen]()} alt={project.nombre} class="w-1/2" width="500" height="500"/>
+        <Image src={project.imagen} alt={project.nombre} class="w-1/2" width="500" height="500"/>
     </div>
     
     
