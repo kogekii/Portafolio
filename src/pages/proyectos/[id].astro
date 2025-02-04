@@ -19,8 +19,8 @@ export function getStaticPaths(){
 }
 const {id}  = Astro.params
 const {project} = Astro.props
-const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/*.{jpeg,jpg,png,svg, webp}')
-if (!images[project.imagen]) throw new Error(`"${project.imagen}" does not exist in glob: "src/assets/*.{jpeg,jpg,png,gif}"`);
+const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/*.{jpeg,jpg,png,svg,webp}')
+if (!images[project.imagen]) throw new Error(`"${project.imagen}" does not exist in glob: "src/assets/*.{jpeg,jpg,png,svg,webp}"`);
 ---
 <Layout title={project.nombre}>
     <div class="flex">
