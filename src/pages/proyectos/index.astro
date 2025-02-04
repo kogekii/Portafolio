@@ -6,7 +6,7 @@ import ProjectCard from "../../components/Project-card.astro";
 <Layout title="proyectos">
     <section class="mt-5 w-full">
 		<h2 class="text-titulo3 font-semibold text-secondary font-holtwood">Proyectos</h2>
-		<div class="flex flex-grow-1 justify-center gap-14 p-0">
+		<div class="flex flex-grow-1 justify-center max-sm:flex-col gap-14 p-0">
 			{proyectos.map((proyecto) => (
 				<ProjectCard
 					id={proyecto.id}
