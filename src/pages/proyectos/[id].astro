@@ -1,7 +1,8 @@
 ---
 import Layout from '../../layouts/Layout.astro'
 import projects from '../../data/proyectos.json'
-import Image from 'astro/components/Image.astro'
+import {Image} from 'astro:assets'
+// import Image from 'astro:assets'
 import { getTechBadge } from '../../components/functions/getTechBadge'
 export function getStaticPaths(){
 
