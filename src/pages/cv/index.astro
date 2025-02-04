@@ -1,0 +1,72 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import ExperienciaCard from "../../components/experiencia-card.astro";
+---
+
+<Layout title="cv">
+    <h1 class="text-black text-titulo1 font-bold">
+        Andrés Elías Ijurra Astudillo
+    </h1>
+    <p class="text-black text-center font-semibold">
+        Licenciado en Ciencias de la Ingeniería - Desarrollador Fullstack
+    </p>
+    <h2 class="text-black text-titulo2 font-semibold">Educación</h2>
+    <article class="flex justify-center">
+        <article class="flex flex-col">
+            <h3 class="text-black lg:text-4xl md:text-3xl sm:text-2xl font-semibold">
+                Ingeniería Civil en Informática
+            </h3>
+            <p class="text-black italic">Universidad de Santiago de Chile - <i>Licenciatura en Ciencias de la Ingeniería</i></p>
+        </article>
+        <article class="flex items-center">
+            <p class="text-black font-semibold">Mar. 2020 - Dic. 2024</p>
+        </article>
+    </article>
+    <!-- Experiencia Laboral -->
+
+    <article class="flex flex-col text-center items-center">
+        <h2 class="text-black text-titulo2 font-semibold">Experiencia</h2>
+        <!-- archivos patrimoniales -->
+        <ExperienciaCard title="Administrador de sitio web y servidor" company="Archivos Patrimoniales Universidad de Santiago de Chile" date="Abr. 2024 - dic. 2024"
+        tecnology="Wordpress, PHP, Python, OpenMediaVault">
+        <ul class="text-black list-disc px-5 text-left ">
+            <li> Trabaje en la mantención del sitio web del Archivo Patrimonial USACH, resolviendo problemas de actualización y compatibilidad de plugins de Wordpress.</li>
+            <li>Desarrolle software para la traducción automática de videos.</li>
+            <li>Implemente un servidor NAS para facilitar el traspaso de archivos entre los trabajadores del Archivo.</li>
+        </ul>
+        </ExperienciaCard>
+        <!-- ApI MercadoPago -->
+        <ExperienciaCard title="Spreadsheet Api MercadoPago" company="Preuniversitario M30M" date="May. 2024"
+        tecnology="Astro, TailwindCss, ReactJs">
+           <ul class="text-black list-disc px-5 text-left ">
+                <li>Trabaje en una API para el Preuniversitario M30M, diseñada para gestionar webhooks de Mercado Pago que capturan datos de compras y suscripciones,<br>
+                     integrando esta información directamente en una hoja de cálculo dev Google.</li>
+                <li>El proyecto fue implementado utilizando Node.js y Express, aprovechando las APIs de Google y Mercado Pago para<br>
+                    una integración eficiente. Además, el despliegue se realizó a través de Vercel, asegurando una alta disponibilidad y
+                    rendimiento óptimo.</li>
+           </ul>
+        </ExperienciaCard>
+        <!-- Tzadik -->
+        <ExperienciaCard title="Pagina web Tzadik Comercial Ltda" company="Tzadik" date="Ene. 2024 - May. 2024"
+        tecnology="Google Cloud, Api Mercado pago, Node.Js, Express, Vercel">
+            <ul class="text-black list-disc px-5 text-left ">
+                <li> Trabaje en Tzadik desarrollando su sitio web con Astro junto a ReactJs y estilice el sitio con TailwindJs, adaptando
+                    el sitio a las necesidades del cliente</li>
+                <li>gestioné el flujo de trabajo DevOps utilizando GitHub Actions, lo que mejoró significativamente la eficiencia y la
+                    colaboración del equipo.</li>
+            </ul>
+            
+        </ExperienciaCard>
+        <!-- Creador de rubricas -->
+        <ExperienciaCard title="Sistema de creación y aplicación de rubricas" company="CICES USACH" date="Jul. 2023 - Dic. 2023"
+        tecnology="Ruby on Rails, VueJs">
+        <ul class="text-black list-disc px-5 text-left">
+            <li>Trabaje para CICES USACH desarrollando una aplicación web que permite a los docentes crear rubricas de manera<br>
+                sencilla e interactiva o reutilizar plantillas que otros profes hayan desarrollado en el sistema.</li>
+            <li>La aplicación fue desarrollada en Ruby On Rails y VueJs.</li>
+        </ul>
+        </ExperienciaCard>
+    </article>
+
+    
+</Layout>

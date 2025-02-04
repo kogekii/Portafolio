@@ -8,7 +8,7 @@ import Navbar from "../components/Navbar.astro";
 ---
 
 <!doctype html>
-<html lang="en" class="bg-primary text-secondary">
+<html lang="en" class="bg-primary text-secondary h-screen w-screen">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="description" content="Astro description" />
@@ -23,12 +23,12 @@ import Navbar from "../components/Navbar.astro";
 		/>
 		<title>{title}</title>
 	</head>
-	<body class="mx-10 2xl:mx-64">
+	<body class="w-screen min-w-screen h-screen">
 		<header>
 			<Navbar />
 		</header>
 
-		<main>
+		<main class="flex flex-col items-center">
 			<slot />
 		</main>
 		<footer>
