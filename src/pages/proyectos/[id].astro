@@ -19,7 +19,6 @@ export function getStaticPaths(){
 }
 const {id}  = Astro.params
 const {project} = Astro.props
-const imageurl = `http://localhost:4321/${project.imagen}`;
 ---
 <Layout title={project.nombre}>
     <div class="flex">
@@ -35,7 +34,7 @@ const imageurl = `http://localhost:4321/${project.imagen}`;
             <a href="/" class=" bg-secondary px-5 py-1 rounded-xl font-holtwood  items-center hover:text-black">Volver</a>
         </div>
         </article>
-        <Image src={imageurl} alt={project.nombre} class="w-1/2" width="500" height="500"/>
+        <Image src={project.imagen} alt={project.nombre} class="w-1/2" width="500" height="500"/>
     </div>
     
     
