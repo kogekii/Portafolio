@@ -2,7 +2,6 @@
 import Layout from '../../layouts/Layout.astro'
 import projects from '../../data/proyectos.json'
 import {Image} from 'astro:assets'
-// import Image from 'astro:assets'
 import { getTechBadge } from '../../components/functions/getTechBadge'
 export function getStaticPaths(){
 
@@ -34,7 +33,7 @@ const {project} = Astro.props
             <a href="/" class=" bg-secondary px-5 py-1 rounded-xl font-holtwood  items-center hover:text-black">Volver</a>
         </div>
         </article>
-        <img src={`/${project.imagen}`} alt={project.nombre} class="w-1/2" width="500" height="500"/>
+        <img src={new URL(`/${project.imagen}`)} alt={project.nombre} class="w-1/2" width="500" height="500"/>
     </div>
     
     
