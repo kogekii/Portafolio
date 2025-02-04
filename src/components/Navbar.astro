@@ -1,11 +1,25 @@
 ---
 ---
 
-<nav class="flex lg:justify-end items-center p-4 ">
+<nav class="flex lg:justify-end items-center p-4" id="navbar">
     <ul class="flex text-logo list-none font-holtwood text-black">
-        <li class="mr-4 hover:text-secondary"><a href="/">Inicio</a></li>
+        <li class="mr-4 hover:text-secondary "><a href="/" >Inicio</a></li>
         <li class="mr-4 hover:text-secondary"><a href="/proyectos">Proyectos</a></li>
         <!-- <li class="mr-4 hover:text-secondary"><a href="/">Blogs</a></li> -->
         <li class="mr-4 hover:text-secondary"><a href="/cv">CV</a></li>
     </ul>
 </nav>
+
+<script>
+    const nav = document.querySelector('#navbar');
+
+    if (nav) {
+        const links = nav.querySelectorAll('a');
+        const currentURL = window.location.href;
+        links.forEach(link => {
+            if (link.href === currentURL) {
+                link.classList.add("text-secondary");
+            }
+        });
+    }
+</script>
