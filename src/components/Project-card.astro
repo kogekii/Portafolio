@@ -1,5 +1,8 @@
 
 ---
+import { Image } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
+import { getTechBadge } from './functions/getTechBadge';
 interface Props {
 	id: number;
 	title: string;
@@ -10,16 +13,17 @@ interface Props {
 	url: string;
 	tecnologias: string[];
 }
-import { Image } from 'astro:assets';
+
 
 const { href, id, title, body, state, url, tecnologias, img } = Astro.props;
-const imageurl = `http://localhost:4321/${img}`;
-import { getTechBadge } from './functions/getTechBadge';
+const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/*.{jpeg,jpg,png,svg,webp}')
+if (!images[img]) throw new Error(`"${img}" does not exist in glob: "src/assets/*.{jpeg,jpg,png,svg,webp}"`);
+
 
 ---
 
     <article class="p-2 rounded-lg border-solid shadow-md max-w-[350px] min-w-[280px] w-full">
-        <Image src={imageurl} class='object-cover' alt="" width="500" height="200"/>
+        <Image src={img} class='object-cover' alt="" width="500" height="200"/>
         <article class="flex flex-col flex-grow flex-shrink ">
             <h1 class="text-3xl text-black">{title}</h1>
 			 <!-- color de estado dependiendo del estado -->
